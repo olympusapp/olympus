@@ -31,7 +31,7 @@ Example(the port must be 3000 for now):
 ```
 ROOT_PASSWD = 'secret'
 SERVER_NAME = 'cool'
-SERVER_PORT = '4000'
+SERVER_PORT = '3000'
 ```
 
 Now run:
