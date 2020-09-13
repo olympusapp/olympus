@@ -6,9 +6,12 @@ Made using:
 - sqlite3
 - JWT
 
-Features
+Features:
 - Registration and logging
 - It's API can be used for clients
+
+Clients:
+- [WebClient](https://github.com/olympusapp/webclient)
 
 ## Wanna try it?
 
