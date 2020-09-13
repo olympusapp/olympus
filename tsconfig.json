@@ -1,0 +1,9 @@
+{
+	"compilerOptions":{
+		"esModuleInterop":true,
+		"moduleResolution":"node"
+	},
+	"files":[
+		"src/index.ts"
+	]
+}
