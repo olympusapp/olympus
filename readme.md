@@ -26,12 +26,12 @@ npm install
 
 Create a file, named '.env'. This will specify some important values used in the server.
 
-Example(the port must be 3000 for now):
+Example:
 
 ```
 ROOT_PASSWD = 'secret'
 SERVER_NAME = 'cool'
-SERVER_PORT = '3000'
+SERVER_PORT = '4000'
 ```
 
 Now run:

@@ -53,6 +53,7 @@ export default (wsInstance) => {
 
 						(ws as any).isAlive = true;
 						ws.on('pong', () => {
+							/* PONG */
 							(ws as any).isAlive = true;
 						});
 
@@ -61,9 +62,7 @@ export default (wsInstance) => {
 								if (ws.isAlive === false) return ws.terminate();
 
 								ws.isAlive = false;
-								ws.ping(() =>{
-									console.log("ping")
-								});
+								ws.ping(() =>{ /* PING */ });
 								
 							});
 						}, 2000);
