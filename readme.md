@@ -1,4 +1,4 @@
-Olympus is a ultra-fast and secure file server.
+Olympus is a ultra-fast and secure file server, designed to be used in local networks to share files between diferent devices-
 
 Made using:
 - TypeScript
