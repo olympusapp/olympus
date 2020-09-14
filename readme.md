@@ -11,7 +11,8 @@ Features:
 - It's API can be used for clients
 
 Clients:
-- [WebClient](https://github.com/olympusapp/webclient)
+- [Web Client](https://github.com/olympusapp/webclient)
+- [Mobile Client](https://github.com/olympusapp/mobileclient)
 
 ## Wanna try it?
 
