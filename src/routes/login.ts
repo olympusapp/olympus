@@ -8,7 +8,7 @@ const ROOT_PASSWD = process.env.ROOT_PASSWD
 const SERVER_NAME = process.env.SERVER_NAME
 
 router.post('/api/login', async (req, res) => {
-	const { username, password } = req.body
+	const { username, password } = req.headers
 	
 	const userExists: any = await getUserDB({
 		username

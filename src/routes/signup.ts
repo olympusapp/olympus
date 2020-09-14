@@ -9,7 +9,7 @@ const ROOT_PASSWD = process.env.ROOT_PASSWD
 const SERVER_NAME = process.env.SERVER_NAME
 
 router.post('/api/signup', (req, res) => {
-	const { username, password } = req.body
+	const { username, password } = req.headers
 		
 	jwt.sign({ username, password }, ROOT_PASSWD, async (err, token) => {
 		const userExists = await getUserDB({

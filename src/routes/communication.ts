@@ -12,7 +12,6 @@ const sendMsg = (ws, msg: {[key: string]: any}) => {
 const verifyToken = (token: string) => {
 	return new Promise((res, rej) => {
 		jwt.verify(token, ROOT_PASSWD, (err: string, data: any)=>{
-			console.log(1,err,2,data)
 			if(err){
 				rej(err)
 			} else {
