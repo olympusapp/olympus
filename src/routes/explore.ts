@@ -5,11 +5,20 @@ import * as path from 'path'
 
 const router = Router()
 
-router.post('/api/explore', verifyToken, (req, res) => {
+router.post('/api/explore', verifyToken, async (req, res) => {
 	
 	const { startFolder } = req.body
 	
 	const fileDrive = path.join(__dirname, '..', 'dummy', startFolder)
+	
+	const folderExists = await (fs as any).exists(fileDrive)
+	
+	if(!folderExists){
+		return res.json({
+			ok: false,
+			errorCode: 404
+		})
+	}
 	
 	fs.readdir(fileDrive, async (err, paths) => {
 		const folderPaths = await Promise.all(paths.map( async (file) => {
@@ -21,7 +30,6 @@ router.post('/api/explore', verifyToken, (req, res) => {
 		}))
 		res.json({
 			ok: true,
-			err,
 			folderPaths
 		})
 	})
