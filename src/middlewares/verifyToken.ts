@@ -1,5 +1,8 @@
 import * as jwt from 'jsonwebtoken'
 
+/*
+* Express-like middleware to verify the JWT token in the request
+*/
 export default (req, res, next) => {
 	const ROOT_PASSWD = process.env.ROOT_PASSWD
 	

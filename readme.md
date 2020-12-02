@@ -1,4 +1,4 @@
-Olympus is a **ultra-fast** and **secure** **self-hosting** file server. Designed to be used across devices in a local network.
+Olympus is a **ultra-fast** and **secure** **self-hosted** server. Designed to be used across devices in a local network.
 
 Made using:
 - TypeScript
@@ -8,13 +8,14 @@ Made using:
 
 Features:
 - Registration and logging
-- It's API can be used for clients
+- Flexible API
+- Scalable and modulable
 
 Clients:
 - [Web Client](https://github.com/olympusapp/webclient)
 - [Mobile Client](https://github.com/olympusapp/mobileclient)
 
-## Wanna try it?
+## Compiling
 
 Clone the repository:
 ```shell
@@ -36,11 +37,14 @@ Example:
 ROOT_PASSWD = 'secret'
 SERVER_NAME = 'cool'
 SERVER_PORT = '4000'
+MEMORIA_DRIVE = './dummy'
 ```
+
+**Note**: You should create the folder you specified in MEMORIA_DRIVE.
 
 Now run:
 ```shell
-start:server
+start
 ```
 
 The server is now working! You can now connect via a client, for example the [WebClient](https://github.com/olympusapp/webclient)

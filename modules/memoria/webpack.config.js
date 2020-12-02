@@ -9,18 +9,21 @@ module.exports = {
 		minimize: true,
 	},
 	entry: {
-		index: './src/index.ts',
+		index: path.join(__dirname, 'src', 'index.ts'),
 	},
 	plugins: [
 		new WebpackBar({
-			name: 'Server',
+			name: 'Memoria',
 		}),
 		new NodemonPlugin(),
 		new WebpackMessages({
-			name: 'Server',
+			name: 'Memoria',
 			logger: str => console.log(`>> ${str}`)
 		})
 	],
+	node: {
+		__dirname: false,
+	},
 	module: {
 		rules: [
 			{
@@ -31,25 +34,24 @@ module.exports = {
 		],
 	},
 	resolve: {
-		extensions: ['.js', '.ts'],
+		extensions: ['.ts'],
 		alias:{
-			Controllers: path.resolve(__dirname, 'src', 'controllers'),
-			Routes: path.resolve(__dirname, 'src', 'routes'),
-			Middlewares: path.resolve(__dirname, 'src', 'middlewares')
+			VerifyToken: path.resolve(__dirname, '..', '..', 'src', 'utils', 'verify_token'),
 		}
-	},
-	node: {
-		__dirname: false,
 	},
 	target: 'node',
 	externals:[
-		'sqlite3',
 		'ws',
-		'chokidar'
+		'chokidar',
+		'express',
+		'fs-extra',
+		'express-ws',
+		'jsonwebtoken',
+		'express-fileupload'
 	],
 	output: {
 		filename: 'index.js',
-		path: path.resolve(__dirname, 'dist'),
+		path: path.resolve(__dirname, '..','..','modules_dist', 'memoria'),
 		libraryTarget: 'commonjs',
 	}
 }
