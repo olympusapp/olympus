@@ -1,7 +1,6 @@
-const NodemonPlugin = require('nodemon-webpack-plugin');
 const path = require('path')
 const WebpackBar = require('webpackbar')
-const WebpackMessages = require('webpack-messages');
+const WebpackMessages = require('webpack-messages')
 
 module.exports = {
 	mode: process.env.NODE_ENV,
@@ -15,7 +14,6 @@ module.exports = {
 		new WebpackBar({
 			name: 'Memoria',
 		}),
-		new NodemonPlugin(),
 		new WebpackMessages({
 			name: 'Memoria',
 			logger: str => console.log(`>> ${str}`)

@@ -1,7 +1,7 @@
-const NodemonPlugin = require('nodemon-webpack-plugin');
+const NodemonPlugin = require('nodemon-webpack-plugin')
 const path = require('path')
 const WebpackBar = require('webpackbar')
-const WebpackMessages = require('webpack-messages');
+const WebpackMessages = require('webpack-messages')
 
 module.exports = {
 	mode: process.env.NODE_ENV,
@@ -45,7 +45,8 @@ module.exports = {
 	externals:[
 		'sqlite3',
 		'ws',
-		'chokidar'
+		'chokidar',
+		'express'
 	],
 	output: {
 		filename: 'index.js',

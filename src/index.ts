@@ -18,7 +18,7 @@ import SignupRoute from 'Routes/signup'
 import InfoRoute from 'Routes/info'
 
 app.use(cors())
-app.use(bodyParser())
+app.use(bodyParser.json())
 
 app.use(morgan('dev'))
 
