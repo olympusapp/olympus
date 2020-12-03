@@ -21,7 +21,7 @@ export const activate = ({ app, loadRouter, verifyToken }) => {
 
 		const { startFolder } = req.body
 
-		const fileDrive = process.env.MEMORIA_DRIVE
+		const fileDrive = path.join(process.env.MEMORIA_DRIVE, startFolder)
 
 		const folderExists = await (fs as any).exists(fileDrive)
 
